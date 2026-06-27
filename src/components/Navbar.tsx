@@ -2,11 +2,11 @@ import Link from "next/link"
 
 function Navbar() {
   return (
-    <nav>
-        <h2>
+    <nav className="max-w-6xl mx-auto px-5 py-5 flex justify-between items-center">
+        <h2 className="font-bold text-xl">
           Fajri.dev
         </h2>
-        <div className="flex gap-5">
+        <div className=" hidden md:flex gap-6">
             <Link  href="/">
                 Home
             </Link>
@@ -17,6 +17,10 @@ function Navbar() {
                 Contact
             </Link>
         </div>
+
+        <button className="md:hidden">
+           ☰
+        </button>
     </nav>
   )
 }

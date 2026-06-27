@@ -15,6 +15,7 @@ function ProjectsPage() {
                     title={project.title}
                     description={project.description}
                     tech={project.tech}
+                    image={project.image}
                 />
             ))}
         </div>
