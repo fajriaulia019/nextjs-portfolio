@@ -1,3 +1,6 @@
+'use client'
+import {Button} from "@/components/ui/button"
+
 export default function Contact () {
   return (
    <section>
@@ -17,6 +20,10 @@ export default function Contact () {
             Github
         </a>
     </div>
+
+    <Button className="mt-8" onClick={() => window.location.href = 'mailto:email@email.com'}>
+        Contact Me
+    </Button>
    </section>
   )
 }
