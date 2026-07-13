@@ -20,8 +20,8 @@ export default async function ProjectDetail({
     <h1>Project tidak ditemukan</h1>;
   }
   return (
-    <main className="p-10">
-      <div className="border rounded-2xl overflow-hidden bg-white">
+    <main className="p-auto max-w-4xl ">
+      <div className="border rounded-2xl overflow-hidden bg-white aspect-3/4">
         <Image src={project?.image} width={600} height={400} alt={project?.title} />
       </div>
       <h1 className="text-4xl font-bold">{project?.title}</h1>

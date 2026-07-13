@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "@/components/website/cards/ProjectCard"
 import { projects } from "@/data/project"
 
 function Project() {
