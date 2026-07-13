@@ -19,7 +19,7 @@ export default function ProjectCard({
   return (
     <div className="border p-6 rounded-xl hover:shadow-xl transition">
 
-        <div className="border rounded-2xl overflow-hidden bg-white">
+        <div className="border rounded-2xl overflow-hidden bg-white aspect-4/3">
             <Image 
             src={image}
             width={600}
