@@ -4,11 +4,11 @@ import { projects } from "@/data/project"
 function Project() {
   return (
     <section>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-center py-20">
             Projects
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-10">
+        <div className="grid md:grid-cols-2 gap-5 mt-10">
             {projects.map((project) => (
                 <ProjectCard
                 key={project.slug}

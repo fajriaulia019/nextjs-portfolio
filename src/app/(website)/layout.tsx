@@ -9,11 +9,9 @@ export default function WebsiteLayout({
   return (
     <>
       <Navbar />
-
-      <main className="pt-20">
+      <main className="min-h-screen">
         {children}
       </main>
-
       <Footer />
     </>
   );

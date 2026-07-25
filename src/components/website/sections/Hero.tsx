@@ -1,40 +1,63 @@
-import Image from "next/image";
+"use client";
+import Link from "next/link";
+import { ArrowRight, Download } from "lucide-react";
+import Lanyard from "@/components/Lanyard";
+import DotField from "@/components/DotField";
 
-function Hero() {
+export default function Hero() {
   return (
-    <section className="overflow-hidden bg-gray-100 sm:grid sm:grid-cols-2 sm:items-center mt-12">
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-2xl text-center ltr:sm:text-left rtl:sm:text-right">
-          <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
-            Hi, I'm Fajri
+    <section className="relative min-h-screen flex items-center overflow-x-hidden b">
+      <div style={{ width: "100%", height: "600px", position: "absolute" }}>
+          <DotField
+            dotRadius={1.5}
+            dotSpacing={14}
+            bulgeStrength={67}
+            glowRadius={160}
+            sparkle={false}
+            waveAmplitude={0}
+            cursorRadius={500}
+            cursorForce={0.1}
+            bulgeOnly
+            gradientFrom="#1253be"
+            gradientTo="#3639cc"
+            glowColor="#120F17"
+          />
+        </div>
+      <div className="container mx-auto w-full grid items-center col-span-12 lg:grid-cols-2">
+        
+        {/* Left */}
+        <div className="min-w-screen md:min-w-full items-center justify-center">
+          <Lanyard
+            position={[0, -1, 14]}
+            gravity={[0, -40, 0]}
+            frontImage=""
+            backImage=""
+            imageFit="cover"
+            lanyardImage=""
+            lanyardWidth={1}
+            transparent={true}
+          />
+        </div>
+
+        {/* Right */}
+        <div className="text-center max-w-3xl min-w-screen md:min-w-full lg:text-left">
+          <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
+            Hi, I'm
+            <br />
+            <span className="text-orange-500">Fajri Aulia</span>
           </h1>
 
-          <h2 className="text-sm font-bold text-gray-900 md:text-md">
-            Web Developer
+          <h2 className="mt-5 text-xl font-semibold text-zinc-300 sm:text-2xl lg:text-3xl">
+            QA Analyst & Web Developer
           </h2>
 
-          <p className="hidden text-gray-500 md:mt-4 md:block">
-            I build modern web application using laravel and next.js.
+          <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
+            Fresh Graduate in Information Technology with internship experience
+            developing Laravel applications using PHP, Laravel, and MySQL.
+            Passionate about building reliable web applications.
           </p>
-
-          <div className="mt-4 md:mt-8">
-            <a
-              href="#"
-              className="inline-block rounded-sm bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:ring-2 focus:ring-yellow-400 focus:outline-hidden"
-            >
-              Get Started Today
-            </a>
-          </div>
         </div>
       </div>
-
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1484959014842-cd1d967a39cf?auto=format&amp;fit=crop&amp;q=80&amp;w=1160"
-        className="h-full w-full object-cover sm:h-[calc(100%-2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%-4rem)] md:rounded-ss-[60px]"
-      />
     </section>
   );
 }
-
-export default Hero;
