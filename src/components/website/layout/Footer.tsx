@@ -1,165 +1,182 @@
-import { Logo } from '@/components/logo'
-import Link from 'next/link'
+"use client";
 
-const links = [
-    {
-        title: 'Features',
-        href: '#',
-    },
-    {
-        title: 'Solution',
-        href: '#',
-    },
-    {
-        title: 'Customers',
-        href: '#',
-    },
-    {
-        title: 'Pricing',
-        href: '#',
-    },
-    {
-        title: 'Help',
-        href: '#',
-    },
-    {
-        title: 'About',
-        href: '#',
-    },
-]
+import Link from "next/link";
+import { Mail } from "lucide-react";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { title: "About", href: "/about" },
+  { title: "Experience", href: "/experience" },
+  { title: "Projects", href: "/projects" },
+  { title: "Contact", href: "/contact" },
+];
 
 export default function FooterSection() {
-    return (
-        <footer className="py-10 md:py-20 bg-zinc-900">
-            <div className="mx-auto max-w-5xl px-6">
-                <Link
-                    href="/"
-                    aria-label="go home"
-                    className="mx-auto block size-fit">
-                    <Logo />
-                </Link>
+  const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
 
-                <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-                    {links.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.href}
-                            className="text-muted-foreground hover:text-primary block duration-150">
-                            <span>{link.title}</span>
-                        </Link>
-                    ))}
-                </div>
-                <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="X/Twitter"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="currentColor"
-                                d="M10.488 14.651L15.25 21h7l-7.858-10.478L20.93 3h-2.65l-5.117 5.886L8.75 3h-7l7.51 10.015L2.32 21h2.65zM16.25 19L5.75 5h2l10.5 14z"></path>
-                        </svg>
-                    </Link>
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="currentColor"
-                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
-                        </svg>
-                    </Link>
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Facebook"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="currentColor"
-                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"></path>
-                        </svg>
-                    </Link>
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Threads"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M19.25 8.505c-1.577-5.867-7-5.5-7-5.5s-7.5-.5-7.5 8.995s7.5 8.996 7.5 8.996s4.458.296 6.5-3.918c.667-1.858.5-5.573-6-5.573c0 0-3 0-3 2.5c0 .976 1 2 2.5 2s3.171-1.027 3.5-3c1-6-4.5-6.5-6-4"
-                                color="currentColor"></path>
-                        </svg>
-                    </Link>
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="currentColor"
-                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"></path>
-                        </svg>
-                    </Link>
-                    <Link
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="TikTok"
-                        className="text-muted-foreground hover:text-primary block">
-                        <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 24 24">
-                            <path
-                                fill="currentColor"
-                                d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"></path>
-                        </svg>
-                    </Link>
-                </div>
-                <span className="text-muted-foreground block text-center text-sm"> © {2026} Tailark, All rights reserved</span>
+  return (
+    <footer className="relative py-12 md:py-16 bg-[#030014] text-zinc-400 border-t border-zinc-900/50 overflow-hidden">
+      {/* Top thin neon glow divider */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+
+      {/* Ambient neon radial glows */}
+      <div className="absolute -bottom-10 left-1/4 -z-10 h-32 w-32 rounded-full bg-blue-600/5 blur-3xl" />
+      <div className="absolute -bottom-10 right-1/4 -z-10 h-32 w-32 rounded-full bg-indigo-500/5 blur-3xl" />
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-8 border-b border-zinc-900/30">
+          {/* Left Column - Brand Emblem */}
+          <div className="col-span-12 md:col-span-6 flex flex-col items-start gap-4">
+            <Link
+              href="/"
+              aria-label="go home"
+              className="flex items-center gap-2.5 group/logo cursor-none"
+              data-cursor="pointer"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-base shadow-[0_0_12px_rgba(59,130,246,0.3)] group-hover/logo:rotate-12 group-hover/logo:scale-105 transition-all duration-300">
+                F
+              </div>
+              <span className="font-bold text-white tracking-widest group-hover/logo:text-blue-400 transition-colors duration-300 text-sm">
+                FAJRI<span className="text-blue-500">.</span>
+              </span>
+            </Link>
+
+            <p className="max-w-md text-sm leading-relaxed text-zinc-500">
+              QA Analyst & Web Developer. Building robust applications with a
+              focus on reliability, automation, and modern, high-fidelity visual
+              design.
+            </p>
+
+            {/* Status indicators */}
+            <div className="flex flex-wrap gap-2.5 mt-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-500/10 bg-blue-950/20 px-3 py-1 text-[11px] font-medium text-blue-400 backdrop-blur-md">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+                </span>
+                Available for opportunities
+              </span>
+              <span className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/40 px-3 py-1 text-[11px] font-medium text-zinc-400">
+                Location: Indonesia
+              </span>
             </div>
-        </footer>
-    )
+          </div>
+
+          {/* Middle Column - Links */}
+          <div className="col-span-12 md:col-span-3 flex flex-col gap-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-white font-mono">
+              Navigation
+            </span>
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link, idx) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={idx}
+                    href={link.href}
+                    className={`text-sm transition-colors duration-150 block cursor-none ${
+                      isActive
+                        ? "text-blue-400 font-medium"
+                        : "text-zinc-500 hover:text-blue-400"
+                    }`}
+                    data-cursor="pointer"
+                    style={{ contentVisibility: "auto" }}
+                  >
+                    {link.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Right Column - Connect */}
+          <div className="col-span-12 md:col-span-3 flex flex-col gap-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-white font-mono">
+              Connect
+            </span>
+            <div className="flex items-center gap-3">
+              <Link
+                href="mailto:fajriaulia019@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                data-cursor="pointer"
+              >
+                <Mail size={16} />
+              </Link>
+              <Link
+                href="https://github.com/fajriaulia019"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                data-cursor="pointer"
+              >
+                <svg
+                  className="size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                data-cursor="pointer"
+              >
+                <svg
+                  className="size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+                </svg>
+              </Link>
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter/X"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                data-cursor="pointer"
+              >
+                <svg
+                  className="size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </Link>
+            </div>
+            <span className="text-[11px] text-zinc-600 font-mono mt-1 block">
+              Status: Secured [SSL]
+            </span>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span className="text-zinc-600 text-xs text-center sm:text-left block">
+            © {currentYear} Fajri Aulia. All rights reserved.
+          </span>
+          <span className="text-zinc-600 text-xs font-mono tracking-wide">
+            [Designed & Built by Fajri Aulia]
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
 }
