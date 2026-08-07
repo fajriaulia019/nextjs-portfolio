@@ -35,7 +35,7 @@ export default function ContactPage() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("fajriaulia020@gmail.com");
+    navigator.clipboard.writeText("fajriaulia019@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -212,25 +212,6 @@ export default function ContactPage() {
 
         {/* Right Side: Quick Connect Panels */}
         <div className="animate-sidebar-item opacity-0 lg:col-span-2 space-y-6">
-          {/* Availability Alert Widget */}
-          <div className="relative p-5 rounded-2xl border border-emerald-500/10 bg-zinc-950/30 overflow-hidden">
-            <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
-            <div className="flex items-center gap-3">
-              <span className="flex h-3.5 w-3.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
-              </span>
-              <div>
-                <h4 className="text-xs font-bold text-white tracking-wide uppercase">
-                  Availability Log
-                </h4>
-                <p className="text-zinc-400 text-xs mt-0.5 leading-relaxed font-light">
-                  Tersedia untuk peluang proyek baru.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Email Copy Card Widget */}
           <div className="p-6 rounded-2xl border border-zinc-900 bg-zinc-950/45 relative group">
             <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
@@ -252,7 +233,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-2 overflow-hidden">
                 <Mail size={15} className="text-blue-400 shrink-0" />
                 <span className="text-xs font-mono truncate">
-                  fajriaulia020@gmail.com
+                  fajriaulia019@gmail.com
                 </span>
               </div>
               <div className="text-zinc-500 group-hover:text-zinc-350 shrink-0">

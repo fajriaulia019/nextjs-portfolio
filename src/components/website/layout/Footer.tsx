@@ -43,9 +43,9 @@ export default function FooterSection() {
             </Link>
 
             <p className="max-w-md text-sm leading-relaxed text-zinc-500">
-              QA Analyst & Web Developer. Building robust applications with a
-              focus on reliability, automation, and modern, high-fidelity visual
-              design.
+              Full-Stack Web Developer. Building robust, secure, and modern web
+              applications with a focus on clean architecture, performance, and
+              responsive interfaces.
             </p>
 
             {/* Status indicators */}

@@ -25,10 +25,9 @@ export default function Hero() {
 
   // Dynamic Typewriter Roles
   const roles = [
-    "QA Analyst",
-    "Web Developer",
-    "Laravel Developer",
-    "System Tester",
+    "Full-Stack Developer",
+    "Laravel Specialist",
+    "Backend Engineer",
   ];
   const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);
   const [roleText, setRoleText] = React.useState("");
@@ -158,7 +157,7 @@ export default function Hero() {
 
       ctxF.fillStyle = "#60a5fa";
       ctxF.font = "bold 12px monospace";
-      ctxF.fillText("QA ANALYST / WEB DEV", 200, 395);
+      ctxF.fillText("FULL-STACK DEVELOPER", 200, 395);
 
       ctxF.fillStyle = "rgba(255, 255, 255, 0.4)";
       ctxF.font = "9px monospace";
@@ -278,7 +277,7 @@ export default function Hero() {
       ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden pt-20"
     >
-      <div style={{ width: "100%", height: "600px", position: "absolute" }}>
+      <div className="py-25 absolute inset-0 z-0">
         <DotField
           dotRadius={1.5}
           dotSpacing={14}
@@ -361,9 +360,9 @@ export default function Hero() {
           )}
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
-            Fresh Graduate in Information Technology with internship experience
-            developing Laravel applications using PHP, Laravel, and MySQL.
-            Passionate about building reliable web applications.
+            Information Technology graduate with hands-on experience building
+            secure, high-performance web applications using Laravel, Next.js,
+            and MySQL. Passionate about clean code and full-stack craft.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">

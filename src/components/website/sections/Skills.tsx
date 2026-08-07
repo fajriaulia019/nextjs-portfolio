@@ -27,9 +27,9 @@ const skills = [
     ),
   },
   {
-    name: "Quality Assurance",
+    name: "Web Security",
     description:
-      "Experienced in end-to-end testing, writing manual test cases, bug reporting, and validating database outputs.",
+      "Focus on implementing secure authentication, data protection, access controls, and defense against common vulnerabilities.",
     icon: (
       <svg
         className="h-8 w-8 text-blue-400"

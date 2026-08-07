@@ -98,7 +98,7 @@ export default function AboutPage() {
                 <div className="p-3 bg-zinc-950/50 rounded-xl border border-zinc-800/50">
                   <span className="text-zinc-500 block mb-1">Focus Areas</span>
                   <span className="font-semibold text-zinc-300">
-                    Purity & Testing
+                    Security & Clean Arch
                   </span>
                 </div>
                 <div className="p-3 bg-zinc-950/50 rounded-xl border border-zinc-800/50">
@@ -117,8 +117,8 @@ export default function AboutPage() {
               "Next.js",
               "Laravel",
               "Typescript",
-              "Automation",
-              "CI/CD",
+              "Web Security",
+              "Database Optimization",
               "React 19",
             ].map((tag) => (
               <span
@@ -136,24 +136,27 @@ export default function AboutPage() {
           {/* Paragraph explanation */}
           <div className="space-y-6 text-zinc-300 text-base md:text-lg leading-relaxed font-light">
             <p>
-              Saya adalah seorang <strong>Web Developer</strong> yang
-              berdedikasi tinggi dalam menciptakan aplikasi web modern
-              berkualitas premium. Menggunakan kombinasi tangguh dari ekosistem
-              PHP dengan framework <strong>Laravel</strong> serta ekosistem
-              Javascript modern berbasis <strong>Next.js</strong>, saya
-              menjembatani visual antarmuka yang dinamis dengan arsitektur
-              backend yang kokoh. Setiap baris kode dirancang untuk memberikan
-              performa maksimal, estetika futuristik yang premium, serta
-              struktur kode yang mudah dirawat secara berkelanjutan.
+              Saya adalah seorang <strong>Full-Stack Web Developer</strong> yang
+              berdedikasi tinggi dalam merancang dan membangun sistem web
+              berkualitas tinggi. Menggunakan keahlian mendalam di ekosistem
+              <strong>Laravel</strong> dan <strong>Next.js</strong>, saya
+              memiliki pengalaman luas dalam menjembatani antarmuka pengguna
+              yang interaktif dengan arsitektur backend yang kokoh. Dari mulai
+              sistem manajemen internal sekolah hingga aplikasi portal
+              pariwisata dinamis, saya selalu berfokus menciptakan solusi
+              perangkat lunak yang andal, berkinerja stabil, dan siap produksi.
             </p>
             <p>
-              Dalam menyusun kode program, saya selalu mengutamakan pendekatan
-              yang teliti terhadap integritas detail dan efisiensi sistem. Saya
-              percaya bahwa web premium tidak hanya indah dipandang, namun harus
-              andal, aman, dan berkinerja cepat di bawah beban tinggi. Untuk
-              itu, saya senantiasa menerapkan praktik optimasi kueri database,
-              penulisan kode modular yang bersih, serta standarisasi uji mandiri
-              demi meluncurkan produk akhir berkualitas tanpa kompromi.
+              Dalam proses reka cipta perangkat lunak, saya selalu mengutamakan
+              aspek keamanan sistem dan optimasi efisiensi basis data. Hal ini
+              diwujudkan melalui penerapan pola arsitektur terstruktur (seperti
+              <em>Service-Repository Pattern</em>), pengamanan sistem
+              autentikasi dari akses tidak sah, optimasi indeks basis data
+              relasional untuk penelusuran data berkecepatan tinggi, hingga
+              perlindungan aset digital secara aman. Saya meyakini bahwa
+              performa yang responsif, struktur kode yang modular, dan keamanan
+              data yang andal adalah pondasi utama dari suatu web premium yang
+              berkelanjutan.
             </p>
           </div>
 
