@@ -164,48 +164,70 @@ export default function ProjectDetail({
         {/* Right Column: Spec cards, tech badges list, links */}
         <div ref={rightColRef} className="lg:col-span-1 space-y-6">
           <div className="border border-blue-500/10 bg-zinc-950/45 rounded-2xl p-6 backdrop-blur-md space-y-5">
-            <h3 className="text-md font-bold text-white border-b border-zinc-900 pb-2">
-              Specifications
-            </h3>
+            {(() => {
+              const specs = [
+                project.role
+                  ? {
+                      label: "My Role",
+                      value: project.role,
+                      icon: (
+                        <ShieldCheck
+                          className="text-blue-500 shrink-0 mt-0.5"
+                          size={18}
+                        />
+                      ),
+                    }
+                  : null,
+                project.date
+                  ? {
+                      label: "Timeline",
+                      value: project.date,
+                      icon: (
+                        <Calendar
+                          className="text-blue-500 shrink-0 mt-0.5"
+                          size={18}
+                        />
+                      ),
+                    }
+                  : null,
+              ].filter(
+                (
+                  spec,
+                ): spec is {
+                  label: string;
+                  value: string;
+                  icon: React.JSX.Element;
+                } => spec !== null,
+              );
 
-            <div className="space-y-4">
-              {[
-                {
-                  label: "My Role",
-                  value: project.role,
-                  icon: (
-                    <ShieldCheck
-                      className="text-blue-500 shrink-0 mt-0.5"
-                      size={18}
-                    />
-                  ),
-                },
-                {
-                  label: "Timeline",
-                  value: project.date,
-                  icon: (
-                    <Calendar
-                      className="text-blue-500 shrink-0 mt-0.5"
-                      size={18}
-                    />
-                  ),
-                },
-              ].map((spec, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  {spec.icon}
-                  <div>
-                    <h4 className="text-xs text-zinc-500 font-medium uppercase font-mono">
-                      {spec.label}
-                    </h4>
-                    <p className="text-sm font-semibold text-zinc-200 mt-0.5">
-                      {spec.value}
-                    </p>
+              if (specs.length === 0) return null;
+
+              return (
+                <>
+                  <h3 className="text-md font-bold text-white border-b border-zinc-900 pb-2">
+                    Specifications
+                  </h3>
+
+                  <div className="space-y-4">
+                    {specs.map((spec, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        {spec.icon}
+                        <div>
+                          <h4 className="text-xs text-zinc-500 font-medium uppercase font-mono">
+                            {spec.label}
+                          </h4>
+                          <p className="text-sm font-semibold text-zinc-200 mt-0.5">
+                            {spec.value}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
-            </div>
 
-            <hr className="border-zinc-900" />
+                  <hr className="border-zinc-900" />
+                </>
+              );
+            })()}
 
             <div>
               <h4 className="text-xs text-zinc-500 font-semibold uppercase font-mono mb-2">

@@ -50,13 +50,6 @@ export default function FooterSection() {
 
             {/* Status indicators */}
             <div className="flex flex-wrap gap-2.5 mt-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-500/10 bg-blue-950/20 px-3 py-1 text-[11px] font-medium text-blue-400 backdrop-blur-md">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
-                </span>
-                Available for opportunities
-              </span>
               <span className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/40 px-3 py-1 text-[11px] font-medium text-zinc-400">
                 Location: Indonesia
               </span>

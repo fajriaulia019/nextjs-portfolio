@@ -2,8 +2,17 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
-import Lanyard from "@/components/Lanyard";
+import dynamic from "next/dynamic";
 import DotField from "@/components/DotField";
+
+const Lanyard = dynamic(() => import("@/components/Lanyard"), {
+  ssr: false,
+  loading: () => (
+    <div className="relative z-0 w-full h-[320px] sm:h-[400px] md:h-screen flex justify-center items-center">
+      <div className="w-12 h-12 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+    </div>
+  ),
+});
 import Magnetic from "@/components/website/layout/Magnetic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
