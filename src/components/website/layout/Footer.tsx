@@ -47,13 +47,6 @@ export default function FooterSection() {
               applications with a focus on clean architecture, performance, and
               responsive interfaces.
             </p>
-
-            {/* Status indicators */}
-            <div className="flex flex-wrap gap-2.5 mt-2">
-              <span className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/40 px-3 py-1 text-[11px] font-medium text-zinc-400">
-                Location: Indonesia
-              </span>
-            </div>
           </div>
 
           {/* Middle Column - Links */}
@@ -120,7 +113,7 @@ export default function FooterSection() {
                 </svg>
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/fajri-aulia-rahman-723599398"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -136,27 +129,7 @@ export default function FooterSection() {
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
                 </svg>
               </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter/X"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
-                data-cursor="pointer"
-              >
-                <svg
-                  className="size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </Link>
             </div>
-            <span className="text-[11px] text-zinc-600 font-mono mt-1 block">
-              Status: Secured [SSL]
-            </span>
           </div>
         </div>
 

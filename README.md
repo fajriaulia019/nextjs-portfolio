@@ -46,22 +46,6 @@ portfolio/
     └── lib/                 # Utilitas & fungsi pembantu (Prisma client & Tailwind merge)
 ```
 
----
-
-## 📂 Data Konten & Proyek Unggulan
-
-Content data dipetakan di file `./src/data/` yang mencakup proyek-proyek riil yang telah dikembangkan:
-
-1.  **PPDB Online - Sekolah XYZ** (`src/data/project.tsx`):
-    - _Deskripsi_: Deskripsi platform penerimaan siswa baru online berbasis Laravel dan Tailwind CSS yang mendigitalisasi proses verifikasi berkas, biodata, ujian online otomatis, dan cetak bukti pendaftaran berformat PDF resmi.
-    - _Arsitektur_: Menerapkan pola kode terstruktur _Layered Architecture (Service-Repository)_ dengan _Form Requests_ untuk menjaga kode bersih dan mudah dirawat.
-2.  **ExploreID - Portal Destinasi Wisata Indonesia** (`src/data/project.tsx`):
-    - _Deskripsi_: Portal informasi pariwisata Nusantara dengan filter pencarian wilayah dan kategori objek wisata secara interaktif dengan performa optimal (<150ms) plus integrasi Google Maps API dinamis yang dikontrol via Alpine.js.
-3.  **SMA Negeri 1 MATAULI Pandan** (`src/data/project.tsx` & `src/data/experience.tsx`):
-    - _Deskripsi_: Website resmi sekolah profil berstandar program internasional (IB World School). Memuat sistem manajemen konten multi-role, pelacakan lulusan alumni, perlindungan dokumen resmi via Canvas PDF (`PDF.js`), login rate limiting throttling, serta translasi bilingual didukung Spatie Translatable.
-
----
-
 ## 💻 Panduan Instalasi Lokal
 
 Ikuti langkah berikut untuk menjalankan portofolio ini di perangkat lokal Anda:

@@ -69,22 +69,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-500 group-hover/img:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80" />
-
-              {/* Floating status tag */}
-              <div className="absolute top-4 right-4 bg-zinc-900/80 backdrop-blur-md border border-emerald-500/20 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-md">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                <span className="w-2 h-2 rounded-full bg-emerald-500 absolute" />
-                <span className="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase">
-                  Active
-                </span>
-              </div>
             </div>
 
             {/* Professional Identity Info */}
             <div className="space-y-4">
               <div>
                 <h3 className="text-2xl font-bold text-white tracking-wide">
-                  Fajri Aulia
+                  Fajri Aulia Rahman
                 </h3>
                 <p className="text-sm text-blue-400 font-medium mt-1">
                   Full-Stack Web Developer

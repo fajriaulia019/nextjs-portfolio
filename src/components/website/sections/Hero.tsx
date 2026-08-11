@@ -190,7 +190,6 @@ export default function Hero() {
         ctxB.fillText("SECURITY REGULATIONS LEVEL 3", 45, 200);
         ctxB.fillText("1. DO NOT DUPLICATE THIS PASS.", 45, 230);
         ctxB.fillText("2. SUBJECT TO DISCIPLINARY ACTIONS.", 45, 260);
-        ctxB.fillText("3. HOST DESIGNATED BY ANTIGRAVITY ENGINE.", 45, 290);
 
         ctxB.fillStyle = "#60a5fa";
         ctxB.font = "11px monospace";
