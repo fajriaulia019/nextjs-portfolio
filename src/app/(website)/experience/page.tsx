@@ -8,9 +8,7 @@ import { experiences } from "@/data/experience";
 import ExperienceCard from "@/components/website/cards/ExperienceCard";
 
 export default function ExperienceSubpage() {
-  const [activeCategory, setActiveCategory] = useState<
-    "ALL" | "FRONTEND" | "BACKEND"
-  >("ALL");
+  const [activeCategory, setActiveCategory] = useState<"ALL">("ALL");
   const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -80,7 +78,7 @@ export default function ExperienceSubpage() {
 
       {/* Category filter tabs */}
       <div className="animate-filter-item opacity-0 flex justify-center lg:justify-start gap-3 mb-12">
-        {(["ALL", "FRONTEND", "BACKEND"] as const).map((cat) => (
+        {(["ALL"] as const).map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
@@ -91,14 +89,14 @@ export default function ExperienceSubpage() {
             }`}
             data-cursor="pointer"
           >
-            {cat === "FRONTEND" && <Code2 size={12} />}
-            {cat === "BACKEND" && <Shield size={12} />}
+            {/* {cat === "FRONTEND" && <Code2 size={12} />}
+            {cat === "BACKEND" && <Shield size={12} />} */}
             {cat === "ALL" && <Sparkles size={12} />}
-            {cat === "FRONTEND"
+            {/* {cat === "FRONTEND"
               ? "Frontend"
               : cat === "BACKEND"
                 ? "Backend"
-                : "Show All"}
+                : "Show All"} */}
           </button>
         ))}
       </div>

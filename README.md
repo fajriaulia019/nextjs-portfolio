@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cyber-Dark Interactive Portfolio
 
-## Getting Started
+Portofolio Full-Stack Web Developer interaktif premium yang dinamis dengan visual modern bertema _cyber-dark glassmorphism_, animasi interaktif 3D, serta struktur data yang terorganisasi dengan rapi.
 
-First, run the development server:
+## 🚀 Fitur Utama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Portofolio ini dirancang dengan tingkat interaktivitas yang tinggi dan estetika visual modern:
+
+- **3D Interactive Lanyard (ID Card)**: Simulasi kartu identitas 3D interaktif yang berayun mengikuti kursor mouse menggunakan kalkulasi physics (gravitasi dan gesekan) berbasis `Three.js` dan `@react-three/rapier`.
+- **Gooey Nav Menu**: Menu navigasi responsif dengan indikator bubble elastis (efek _gooey_) yang menyatu secara visual dan terintegrasi otomatis dengan perutean Next.js.
+- **Glassmorphic Cyberpunk Theme**: Desain visual futuristik super premium yang memadukan latar belakang bermotif _dot grid_, efek cahaya aura neon mengambang, serta transparansi latar belakang yang halus (_backdrop blur_).
+- **Clean & Decoupled Data**: Seluruh riwayat pengalaman kerja serta daftar proyek dipisah sepenuhnya ke dalam folder data (`src/data/`). Memudahkan pembaruan konten portofolio tanpa merusak struktur UI utama.
+
+---
+
+## 🛠️ Stack Teknologi
+
+Proyek ini dibangun di atas teknologi modern dengan kinerja tinggi:
+
+- **Frontend**: [Next.js 16.2](https://nextjs.org/) (App Router), [React 19](https://react.dev/), dan [TypeScript](https://www.typescriptlang.org/).
+- **Styling & UI**: [Tailwind CSS v4](https://tailwindcss.com/) (menggunakan `@tailwindcss/postcss` untuk efisiensi kompilasi gaya) dan [Lucide React](https://lucide.dev/) untuk ikonografi.
+- **Animasi & Efek**: [GSAP (GreenSock Animation Platform)](https://gsap.com/) untuk transisi perpindahan halaman dan animasi _entrance loading_ yang smooth.
+- **Grafis 3D**: [Three.js](https://threejs.org/) dengan pembungkus React [@react-three/fiber](https://r3f.docs.pmnd.rs/getting-started/introduction) & [@react-three/drei](https://github.com/pmndrs/drei), dan simulasi fisika [@react-three/rapier](https://github.com/pmndrs/react-three-rapier).
+- **Prisma Client**: Prisma ORM dikonfigurasikan di dalam proyek dengan PostgreSQL adapter (`@prisma/adapter-pg` dan `pg`).
+  > ⚠️ **Catatan**: Dependensi dan skema Prisma (`prisma/schema.prisma`) telah disetup di berkas konfigurasi, namun portofolio ini saat ini berjalan sepenuhnya menggunakan data statis terpusat di folder `src/data/` untuk meminimalkan beban runtime basis data.
+
+---
+
+## 📦 Struktur Direktori Proyek
+
+```text
+portfolio/
+├── prisma/                  # Konfigurasi database & skema Prisma ORM
+├── public/                  # Aset statis (gambar, favicon, logo)
+└── src/
+    ├── app/                 # Perutean aplikasi (Website Pages & API Routes)
+    │   ├── (website)/       # Halaman utama portofolio (Home, About, Projects, Experience, Contact)
+    │   ├── admin/           # Halaman administrasi portofolio
+    │   └── api/             # API endpoint pendukung
+    ├── assets/              # Logo dan komponen grafis kustom
+    ├── components/          # Komponen UI Modular
+    │   ├── ui/              # Komponen dasar (Button, Card, Badge, dll)
+    │   └── website/         # Layout & seksi halaman portofolio (Hero, Navbar, Footer)
+    ├── data/                # Data konten statik (experience.tsx & project.tsx)
+    ├── generated/           # Berkas autogenerasi Prisma Client
+    └── lib/                 # Utilitas & fungsi pembantu (Prisma client & Tailwind merge)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Data Konten & Proyek Unggulan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Content data dipetakan di file `./src/data/` yang mencakup proyek-proyek riil yang telah dikembangkan:
 
-## Learn More
+1.  **PPDB Online - Sekolah XYZ** (`src/data/project.tsx`):
+    - _Deskripsi_: Deskripsi platform penerimaan siswa baru online berbasis Laravel dan Tailwind CSS yang mendigitalisasi proses verifikasi berkas, biodata, ujian online otomatis, dan cetak bukti pendaftaran berformat PDF resmi.
+    - _Arsitektur_: Menerapkan pola kode terstruktur _Layered Architecture (Service-Repository)_ dengan _Form Requests_ untuk menjaga kode bersih dan mudah dirawat.
+2.  **ExploreID - Portal Destinasi Wisata Indonesia** (`src/data/project.tsx`):
+    - _Deskripsi_: Portal informasi pariwisata Nusantara dengan filter pencarian wilayah dan kategori objek wisata secara interaktif dengan performa optimal (<150ms) plus integrasi Google Maps API dinamis yang dikontrol via Alpine.js.
+3.  **SMA Negeri 1 MATAULI Pandan** (`src/data/project.tsx` & `src/data/experience.tsx`):
+    - _Deskripsi_: Website resmi sekolah profil berstandar program internasional (IB World School). Memuat sistem manajemen konten multi-role, pelacakan lulusan alumni, perlindungan dokumen resmi via Canvas PDF (`PDF.js`), login rate limiting throttling, serta translasi bilingual didukung Spatie Translatable.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💻 Panduan Instalasi Lokal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ikuti langkah berikut untuk menjalankan portofolio ini di perangkat lokal Anda:
 
-## Deploy on Vercel
+### Prasyarat
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pastikan Anda telah memasang [Node.js](https://nodejs.org/) (versi LTS yang direkomendasikan) di sistem Anda.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Langkah-langkah
+
+1.  **Clone Repositori**:
+
+    ```bash
+    git clone https://github.com/fajriaulia019/nextjs-portfolio.git
+    cd portfolio
+    ```
+
+2.  **Instalasi Dependensi**:
+
+    ```bash
+    npm install
+    ```
+
+3.  **Jalankan Server Pengembangan**:
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Akses Aplikasi**:
+    Buka peramban (browser) Anda dan kunjungi halaman:
+    [http://localhost:3000](http://localhost:3000)

@@ -5,16 +5,16 @@ export type ExperienceType = {
   status: "ACTIVE" | "COMPLETED";
   description: string[];
   tech: string[];
-  category: "FRONTEND" | "BACKEND";
+  category: "EXPERIENCE";
 };
 
 export const experiences: ExperienceType[] = [
   {
-    role: "Full-Stack Web Developer",
+    role: "Web Developer",
     company: "SMA Negeri 1 Matauli Pandan",
     period: "Ags 2025 - Jan 2026",
     status: "COMPLETED",
-    category: "BACKEND",
+    category: "EXPERIENCE",
     tech: ["Laravel", "Vite", "Tailwind CSS", "Alpine.js", "MySQL", "PDF.js"],
     description: [
       "Mengembangkan portal web profil resmi sekolah yang saat ini aktif digunakan langsung, lengkap dengan dukungan multibahasa (ID/EN) terintegrasi Spatie Translatable dan modul verifikasi program International Baccalaureate (IB).",
