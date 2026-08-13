@@ -97,7 +97,7 @@ export default function Lanyard({
       >
         <Suspense fallback={null}>
           <ambientLight intensity={Math.PI} />
-          <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
+          <Physics gravity={gravity} timeStep="vary">
             <Band
               isMobile={isMobile}
               frontImage={frontImage}
@@ -313,10 +313,11 @@ function Band({
           0.1,
           Math.min(1, lerped.distanceTo(ref.current.translation())),
         );
-        lerped.lerp(
-          ref.current.translation(),
+        const lerpFactor = Math.min(
+          1.0,
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)),
         );
+        lerped.lerp(ref.current.translation(), lerpFactor);
       });
       curve.points[0].copy(j3.current.translation());
       curve.points[1].copy(getLerped(j2.current));
