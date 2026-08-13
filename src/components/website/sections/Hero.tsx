@@ -23,6 +23,15 @@ export default function Hero() {
   const lanyardRef = useRef<HTMLDivElement>(null);
   const mobileLanyardRef = useRef<HTMLDivElement>(null);
 
+  const [load3D, setLoad3D] = React.useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoad3D(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Dynamic Typewriter Roles
   const roles = ["Full-Stack Developer", "Web Developer", "Backend Engineer"];
   const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);
@@ -294,20 +303,37 @@ export default function Hero() {
         {!isMobileView && (
           <div
             ref={lanyardRef}
-            className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing py-5"
+            className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing py-5 h-screen"
             style={{ willChange: "transform", transformStyle: "preserve-3d" }}
             data-cursor="drag"
           >
-            <Lanyard
-              position={[0, 0, 12]}
-              gravity={[0, -30, 0]}
-              frontImage="lanyard/front-photo.png"
-              backImage={badgeImages.back}
-              imageFit="cover"
-              lanyardImage="lanyard/lanyard2.png"
-              lanyardWidth={1}
-              transparent={true}
-            />
+            {load3D ? (
+              <Lanyard
+                position={[0, 0, 12]}
+                gravity={[0, -30, 0]}
+                frontImage="lanyard/front-photo.png"
+                backImage={badgeImages.back}
+                imageFit="cover"
+                lanyardImage="lanyard/lanyard2.png"
+                lanyardWidth={1}
+                transparent={true}
+              />
+            ) : (
+              <div className="relative z-0 w-full h-[640px] flex justify-center items-center">
+                {/* Sleek static card skeleton */}
+                <div className="w-[200px] h-[320px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-5 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                    <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
+                  </div>
+                  <div className="space-y-3 w-full text-center">
+                    <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
+                    <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
+                    <div className="h-2 bg-zinc-900 rounded w-1/2 mx-auto animate-pulse"></div>
+                  </div>
+                  <div className="h-6 bg-zinc-900 rounded w-full animate-pulse"></div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -340,18 +366,33 @@ export default function Hero() {
             className="lg:hidden flex justify-center w-full my-4 h-[320px] sm:h-[400px] md:h-[480px]"
             style={{ willChange: "transform", transformStyle: "preserve-3d" }}
           >
-            {isMobileView && (
-              <Lanyard
-                position={[0, -1, 14]}
-                gravity={[0, -40, 0]}
-                frontImage="lanyard/front-photo.png"
-                backImage={badgeImages.back}
-                imageFit="cover"
-                lanyardImage="lanyard/lanyard2.png"
-                lanyardWidth={1}
-                transparent={true}
-              />
-            )}
+            {isMobileView &&
+              (load3D ? (
+                <Lanyard
+                  position={[0, -1, 14]}
+                  gravity={[0, -40, 0]}
+                  frontImage="lanyard/front-photo.png"
+                  backImage={badgeImages.back}
+                  imageFit="cover"
+                  lanyardImage="lanyard/lanyard2.png"
+                  lanyardWidth={1}
+                  transparent={true}
+                />
+              ) : (
+                <div className="relative z-0 w-full h-full flex justify-center items-center">
+                  {/* Sleek static card skeleton */}
+                  <div className="w-[180px] h-[280px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-4 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
+                    </div>
+                    <div className="space-y-3 w-full text-center">
+                      <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
+                      <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
+                    </div>
+                    <div className="h-5 bg-zinc-900 rounded w-full animate-pulse"></div>
+                  </div>
+                </div>
+              ))}
           </div>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
