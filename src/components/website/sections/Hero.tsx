@@ -207,15 +207,27 @@ export default function Hero() {
     setTimeout(drawBadgeDetails, 500);
   }, []);
 
-  const [isMobileView, setIsMobileView] = React.useState(false);
+  const [isMobileView, setIsMobileView] = React.useState(() => {
+    if (typeof window !== "undefined") {
+      return !window.matchMedia("(min-width: 1024px)").matches;
+    }
+    return false;
+  });
 
   React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 1024);
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const handleMatch = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobileView(!e.matches);
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    handleMatch(mediaQuery);
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMatch);
+      return () => mediaQuery.removeEventListener("change", handleMatch);
+    } else {
+      mediaQuery.addListener(handleMatch);
+      return () => mediaQuery.removeListener(handleMatch);
+    }
   }, []);
 
   useEffect(() => {
@@ -239,7 +251,7 @@ export default function Hero() {
         });
       }
 
-      if (lanyard) {
+      if (!isMobileView && lanyard) {
         gsap.to(lanyard, {
           y: 100,
           scale: 0.92,
@@ -253,7 +265,7 @@ export default function Hero() {
         });
       }
 
-      if (mobileLanyard) {
+      if (isMobileView && mobileLanyard) {
         gsap.to(mobileLanyard, {
           y: 50,
           scale: 0.85,
