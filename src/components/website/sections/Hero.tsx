@@ -344,10 +344,10 @@ export default function Hero() {
               <Lanyard
                 position={[0, -1, 14]}
                 gravity={[0, -40, 0]}
-                frontImage={badgeImages.front}
+                frontImage="lanyard/front-photo.png"
                 backImage={badgeImages.back}
                 imageFit="cover"
-                lanyardImage=""
+                lanyardImage="lanyard/lanyard2.png"
                 lanyardWidth={1}
                 transparent={true}
               />
