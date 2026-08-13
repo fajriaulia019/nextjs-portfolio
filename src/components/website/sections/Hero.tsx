@@ -275,7 +275,7 @@ export default function Hero() {
       <div className="py-25 absolute inset-0 z-0">
         <DotField
           dotRadius={1.5}
-          dotSpacing={14}
+          dotSpacing={isMobileView ? 28 : 14}
           bulgeStrength={67}
           glowRadius={160}
           sparkle={false}
