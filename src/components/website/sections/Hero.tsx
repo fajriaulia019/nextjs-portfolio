@@ -300,14 +300,14 @@ export default function Hero() {
 
       <div className="container mx-auto w-full grid items-center col-span-12 lg:grid-cols-2 relative pb-16 bg-transparent">
         {/* Left Lanyard - Only shown on Desktop */}
-        {!isMobileView && (
-          <div
-            ref={lanyardRef}
-            className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing py-5 h-screen"
-            style={{ willChange: "transform", transformStyle: "preserve-3d" }}
-            data-cursor="drag"
-          >
-            {load3D ? (
+        <div
+          ref={lanyardRef}
+          className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing py-5 h-screen"
+          style={{ willChange: "transform", transformStyle: "preserve-3d" }}
+          data-cursor="drag"
+        >
+          {!isMobileView &&
+            (load3D ? (
               <Lanyard
                 position={[0, 0, 12]}
                 gravity={[0, -30, 0]}
@@ -333,9 +333,8 @@ export default function Hero() {
                   <div className="h-6 bg-zinc-900 rounded w-full animate-pulse"></div>
                 </div>
               </div>
-            )}
-          </div>
-        )}
+            ))}
+        </div>
 
         {/* Right Info */}
         <div

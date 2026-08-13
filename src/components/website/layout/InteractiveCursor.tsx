@@ -98,7 +98,7 @@ export default function InteractiveCursor() {
   return (
     <>
       {/* Hide on mobile devices */}
-      <div className="hidden xl:block pointer-events-none fixed inset-0 z-[9999]">
+      <div className="hidden md:block pointer-events-none fixed inset-0 z-[9999]">
         {/* Outer Ring */}
         <div
           ref={ringRef}
