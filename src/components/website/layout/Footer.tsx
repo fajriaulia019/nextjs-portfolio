@@ -41,7 +41,7 @@ export default function FooterSection() {
               </span>
             </Link>
 
-            <p className="max-w-md text-sm leading-relaxed text-zinc-500">
+            <p className="max-w-md text-sm leading-relaxed text-zinc-400">
               Full-Stack Web Developer. Building robust, secure, and modern web
               applications with a focus on clean architecture, performance, and
               responsive interfaces.
@@ -66,7 +66,7 @@ export default function FooterSection() {
                     className={`text-sm transition-colors duration-150 block cursor-none ${
                       isActive
                         ? "text-blue-400 font-medium"
-                        : "text-zinc-500 hover:text-blue-400"
+                        : "text-zinc-400 hover:text-blue-400"
                     }`}
                     data-cursor="pointer"
                     style={{ contentVisibility: "auto" }}
@@ -89,7 +89,7 @@ export default function FooterSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Email"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-400 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
                 data-cursor="pointer"
               >
                 <Mail size={16} />
@@ -99,7 +99,7 @@ export default function FooterSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-400 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
                 data-cursor="pointer"
               >
                 <svg
@@ -116,7 +116,7 @@ export default function FooterSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-500 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800/80 bg-zinc-950/40 text-zinc-400 hover:border-blue-500/40 hover:text-white transition duration-200 cursor-none"
                 data-cursor="pointer"
               >
                 <svg
@@ -134,10 +134,10 @@ export default function FooterSection() {
 
         {/* Bottom section */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-zinc-600 text-xs text-center sm:text-left block">
+          <span className="text-zinc-400 text-xs text-center sm:text-left block">
             © {currentYear} Fajri Aulia. All rights reserved.
           </span>
-          <span className="text-zinc-600 text-xs font-mono tracking-wide">
+          <span className="text-zinc-400 text-xs font-mono tracking-wide">
             [Designed & Built by Fajri Aulia]
           </span>
         </div>

@@ -107,6 +107,7 @@ export default function Navbar() {
               <button
                 onClick={() => setOpen(true)}
                 className="rounded-xl border border-zinc-800 p-2 text-white transition hover:border-blue-500 hover:text-blue-500"
+                aria-label="Buka menu navigasi"
               >
                 <Menu size={18} />
               </button>
@@ -204,6 +205,7 @@ export default function Navbar() {
             <button
               onClick={() => setOpen(false)}
               className="rounded-xl border border-zinc-700 p-2 text-white hover:border-blue-500 hover:text-blue-500 transition"
+              aria-label="Tutup menu navigasi"
             >
               <X />
             </button>

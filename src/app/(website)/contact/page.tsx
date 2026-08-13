@@ -44,10 +44,10 @@ export default function ContactPage() {
 
       {/* Header section */}
       <div className="space-y-4 mb-16 text-center">
-        <h2 className="animate-header-item opacity-0 text-xs font-semibold tracking-wider text-blue-500 uppercase flex items-center justify-center gap-2">
+        <p className="animate-header-item opacity-0 text-xs font-semibold tracking-wider text-blue-500 uppercase flex items-center justify-center gap-2">
           <Mail size={14} className="text-blue-500 animate-pulse" />
           System.log : init_connection
-        </h2>
+        </p>
         <h1 className="animate-header-item opacity-0 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
           Get In Touch
         </h1>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               <h3 className="text-lg font-bold text-white tracking-wide">
                 E-mail
               </h3>
-              <p className="text-zinc-500 text-xs font-mono mt-1">
+              <p className="text-zinc-400 text-xs font-mono mt-1">
                 fajriaulia019@gmail.com
               </p>
             </div>

@@ -72,7 +72,7 @@ export default function ExperienceCard({ item, index }: ExperienceCardProps) {
 
           {/* Date & status pill badges */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 text-xs text-zinc-500">
+            <div className="flex items-center gap-1.5 text-xs text-zinc-400">
               <Calendar size={12} />
               <span>{item.period}</span>
             </div>

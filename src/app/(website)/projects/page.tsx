@@ -52,9 +52,9 @@ function ProjectsPage() {
         ref={headerRef}
         className="relative z-10 space-y-4 mb-16 text-center lg:text-left"
       >
-        <h2 className="text-sm font-semibold tracking-wider text-blue-500 uppercase">
+        <p className="text-sm font-semibold tracking-wider text-blue-500 uppercase">
           Selected Works
-        </h2>
+        </p>
         <h1 className="text-4xl font-bold tracking-tight text-white lg:text-5xl">
           My Projects
         </h1>

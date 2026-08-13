@@ -63,10 +63,10 @@ export default function ExperienceSubpage() {
 
       {/* Header section */}
       <div className="space-y-4 mb-16 text-center lg:text-left">
-        <h2 className="animate-header-item opacity-0 text-sm font-semibold tracking-wider text-blue-500 uppercase flex items-center justify-center lg:justify-start gap-2">
+        <p className="animate-header-item opacity-0 text-sm font-semibold tracking-wider text-blue-500 uppercase flex items-center justify-center lg:justify-start gap-2">
           <Briefcase size={14} className="text-blue-500 animate-pulse" />
           System.log : job_history
-        </h2>
+        </p>
         <h1 className="animate-header-item opacity-0 text-4xl font-bold tracking-tight text-white lg:text-5xl">
           Work Experience
         </h1>
@@ -88,6 +88,7 @@ export default function ExperienceSubpage() {
                 : "border-zinc-800 bg-zinc-900/30 text-zinc-400 hover:text-white hover:border-zinc-700"
             }`}
             data-cursor="pointer"
+            aria-label="Tampilkan semua bidang pekerjaan"
           >
             {/* {cat === "FRONTEND" && <Code2 size={12} />}
             {cat === "BACKEND" && <Shield size={12} />} */}

@@ -36,10 +36,10 @@ export default function AboutPage() {
 
       {/* Main Headings */}
       <div className="space-y-4 mb-16 text-center lg:text-left">
-        <h2 className="animate-header-item opacity-0 text-sm font-semibold tracking-widest text-blue-500 uppercase flex items-center justify-center lg:justify-start gap-2">
+        <p className="animate-header-item opacity-0 text-sm font-semibold tracking-widest text-blue-500 uppercase flex items-center justify-center lg:justify-start gap-2">
           <Terminal size={14} className="text-blue-500 animate-pulse" />
           System.profile : active
-        </h2>
+        </p>
         <h1 className="animate-header-item opacity-0 text-4xl font-bold tracking-tight text-white lg:text-5xl">
           About Me
         </h1>
@@ -87,13 +87,13 @@ export default function AboutPage() {
               {/* Stats & Metadata widgets */}
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div className="p-3 bg-zinc-950/50 rounded-xl border border-zinc-800/50">
-                  <span className="text-zinc-500 block mb-1">Focus Areas</span>
+                  <span className="text-zinc-400 block mb-1">Focus Areas</span>
                   <span className="font-semibold text-zinc-300">
                     Security & Clean Arch
                   </span>
                 </div>
                 <div className="p-3 bg-zinc-950/50 rounded-xl border border-zinc-800/50">
-                  <span className="text-zinc-500 block mb-1">Tech Base</span>
+                  <span className="text-zinc-400 block mb-1">Tech Base</span>
                   <span className="font-semibold text-zinc-300">
                     Laravel & Nextjs
                   </span>
