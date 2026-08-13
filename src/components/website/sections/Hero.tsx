@@ -2,17 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
-import dynamic from "next/dynamic";
 import DotField from "@/components/DotField";
-
-const Lanyard = dynamic(() => import("@/components/Lanyard"), {
-  ssr: false,
-  loading: () => (
-    <div className="relative z-0 w-full h-[320px] sm:h-[400px] md:h-screen flex justify-center items-center">
-      <div className="w-12 h-12 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
-    </div>
-  ),
-});
 import Magnetic from "@/components/website/layout/Magnetic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,10 +14,15 @@ export default function Hero() {
   const mobileLanyardRef = useRef<HTMLDivElement>(null);
 
   const [load3D, setLoad3D] = React.useState(false);
+  const [LanyardComponent, setLanyardComponent] =
+    React.useState<React.ComponentType<any> | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad3D(true);
+      import("@/components/Lanyard").then((mod) => {
+        setLanyardComponent(() => mod.default);
+      });
     }, 2500);
     return () => clearTimeout(timer);
   }, []);
@@ -306,9 +301,9 @@ export default function Hero() {
           style={{ willChange: "transform", transformStyle: "preserve-3d" }}
           data-cursor="drag"
         >
-          {load3D ? (
+          {load3D && LanyardComponent ? (
             !isMobileView && (
-              <Lanyard
+              <LanyardComponent
                 position={[0, 0, 12]}
                 gravity={[0, -30, 0]}
                 frontImage="lanyard/front-photo.webp"
@@ -366,9 +361,9 @@ export default function Hero() {
             className="lg:hidden flex justify-center w-full my-4 h-[320px] sm:h-[400px] md:h-[480px]"
             style={{ willChange: "transform", transformStyle: "preserve-3d" }}
           >
-            {load3D ? (
+            {load3D && LanyardComponent ? (
               isMobileView && (
-                <Lanyard
+                <LanyardComponent
                   position={[0, -1, 14]}
                   gravity={[0, -40, 0]}
                   frontImage="lanyard/front-photo.webp"
