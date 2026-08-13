@@ -306,8 +306,8 @@ export default function Hero() {
           style={{ willChange: "transform", transformStyle: "preserve-3d" }}
           data-cursor="drag"
         >
-          {!isMobileView &&
-            (load3D ? (
+          {load3D ? (
+            !isMobileView && (
               <Lanyard
                 position={[0, 0, 12]}
                 gravity={[0, -30, 0]}
@@ -318,22 +318,23 @@ export default function Hero() {
                 lanyardWidth={1}
                 transparent={true}
               />
-            ) : (
-              <div className="relative z-0 w-full h-[640px] flex justify-center items-center">
-                {/* Sleek static card skeleton */}
-                <div className="w-[200px] h-[320px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-5 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                    <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
-                  </div>
-                  <div className="space-y-3 w-full text-center">
-                    <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
-                    <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
-                    <div className="h-2 bg-zinc-900 rounded w-1/2 mx-auto animate-pulse"></div>
-                  </div>
-                  <div className="h-6 bg-zinc-900 rounded w-full animate-pulse"></div>
+            )
+          ) : (
+            <div className="relative z-0 w-full h-[640px] flex justify-center items-center">
+              {/* Sleek static card skeleton */}
+              <div className="w-[200px] h-[320px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-5 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
+                <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                  <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
                 </div>
+                <div className="space-y-3 w-full text-center">
+                  <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
+                  <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
+                  <div className="h-2 bg-zinc-900 rounded w-1/2 mx-auto animate-pulse"></div>
+                </div>
+                <div className="h-6 bg-zinc-900 rounded w-full animate-pulse"></div>
               </div>
-            ))}
+            </div>
+          )}
         </div>
 
         {/* Right Info */}
@@ -365,8 +366,8 @@ export default function Hero() {
             className="lg:hidden flex justify-center w-full my-4 h-[320px] sm:h-[400px] md:h-[480px]"
             style={{ willChange: "transform", transformStyle: "preserve-3d" }}
           >
-            {isMobileView &&
-              (load3D ? (
+            {load3D ? (
+              isMobileView && (
                 <Lanyard
                   position={[0, -1, 14]}
                   gravity={[0, -40, 0]}
@@ -377,21 +378,22 @@ export default function Hero() {
                   lanyardWidth={1}
                   transparent={true}
                 />
-              ) : (
-                <div className="relative z-0 w-full h-full flex justify-center items-center">
-                  {/* Sleek static card skeleton */}
-                  <div className="w-[180px] h-[280px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-4 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                      <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
-                    </div>
-                    <div className="space-y-3 w-full text-center">
-                      <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
-                      <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
-                    </div>
-                    <div className="h-5 bg-zinc-900 rounded w-full animate-pulse"></div>
+              )
+            ) : (
+              <div className="relative z-0 w-full h-full flex justify-center items-center">
+                {/* Sleek static card skeleton */}
+                <div className="w-[180px] h-[280px] rounded-2xl border border-blue-500/20 bg-zinc-950/80 backdrop-blur-md flex flex-col items-center justify-between p-4 animate-pulse shadow-[0_0_50px_rgba(59,130,246,0.12)]">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                    <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
                   </div>
+                  <div className="space-y-3 w-full text-center">
+                    <div className="h-4 bg-zinc-900 rounded w-4/5 mx-auto animate-pulse"></div>
+                    <div className="h-2.5 bg-zinc-900 rounded w-3/5 mx-auto animate-pulse"></div>
+                  </div>
+                  <div className="h-5 bg-zinc-900 rounded w-full animate-pulse"></div>
                 </div>
-              ))}
+              </div>
+            )}
           </div>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
