@@ -335,12 +335,12 @@ export default function Hero() {
           </h2>
 
           {/* Mobile Lanyard (Only shown on Mobile viewports inline) */}
-          {isMobileView && (
-            <div
-              ref={mobileLanyardRef}
-              className="lg:hidden flex justify-center w-full my-4"
-              style={{ willChange: "transform", transformStyle: "preserve-3d" }}
-            >
+          <div
+            ref={mobileLanyardRef}
+            className="lg:hidden flex justify-center w-full my-4 h-[320px] sm:h-[400px] md:h-[480px]"
+            style={{ willChange: "transform", transformStyle: "preserve-3d" }}
+          >
+            {isMobileView && (
               <Lanyard
                 position={[0, -1, 14]}
                 gravity={[0, -40, 0]}
@@ -351,8 +351,8 @@ export default function Hero() {
                 lanyardWidth={1}
                 transparent={true}
               />
-            </div>
-          )}
+            )}
+          </div>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
             Information Technology graduate with hands-on experience building
