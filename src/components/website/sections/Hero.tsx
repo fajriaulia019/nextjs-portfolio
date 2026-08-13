@@ -24,11 +24,7 @@ export default function Hero() {
   const mobileLanyardRef = useRef<HTMLDivElement>(null);
 
   // Dynamic Typewriter Roles
-  const roles = [
-    "Full-Stack Developer",
-    "Web Developer",
-    "Backend Engineer",
-  ];
+  const roles = ["Full-Stack Developer", "Web Developer", "Backend Engineer"];
   const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);
   const [roleText, setRoleText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
@@ -324,7 +320,7 @@ export default function Hero() {
             Hi, I'm
             <br />
             <span className="bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-              Fajri Aulia
+              Fajri Aulia Rahman
             </span>
           </h1>
 
