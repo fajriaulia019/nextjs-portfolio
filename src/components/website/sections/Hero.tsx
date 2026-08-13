@@ -377,12 +377,12 @@ export default function Hero() {
               isMobileView && (
                 <LanyardComponent
                   position={[0, -1, 14]}
-                  gravity={[0, -40, 0]}
+                  gravity={[0, -30, 0]}
                   frontImage="lanyard/front-photo.webp"
                   backImage={badgeImages.back}
                   imageFit="cover"
                   lanyardImage="lanyard/lanyard2.png"
-                  lanyardWidth={1}
+                  lanyardWidth={0.5}
                   transparent={true}
                 />
               )
