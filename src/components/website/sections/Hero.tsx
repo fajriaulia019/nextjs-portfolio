@@ -311,7 +311,7 @@ export default function Hero() {
               <Lanyard
                 position={[0, 0, 12]}
                 gravity={[0, -30, 0]}
-                frontImage="lanyard/front-photo.png"
+                frontImage="lanyard/front-photo.webp"
                 backImage={badgeImages.back}
                 imageFit="cover"
                 lanyardImage="lanyard/lanyard2.png"
@@ -370,7 +370,7 @@ export default function Hero() {
                 <Lanyard
                   position={[0, -1, 14]}
                   gravity={[0, -40, 0]}
-                  frontImage="lanyard/front-photo.png"
+                  frontImage="lanyard/front-photo.webp"
                   backImage={badgeImages.back}
                   imageFit="cover"
                   lanyardImage="lanyard/lanyard2.png"
