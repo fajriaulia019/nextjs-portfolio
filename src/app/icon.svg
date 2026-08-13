@@ -1,0 +1,30 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded-xl background -->
+  <rect width="512" height="512" rx="140" fill="url(#bgGrad)" />
+
+  <!-- Futuristic geometric monogram 'F' + 'A' (Fajri Aulia) -->
+  <g fill="url(#logoGrad)">
+    <!-- Stem of F -->
+    <path d="M150 120 H210 V392 H150 Z" />
+    
+    <!-- Top bar of F -->
+    <path d="M210 120 H360 L330 180 H210 Z" />
+    
+    <!-- Middle bar of F -->
+    <path d="M210 220 H300 L275 280 H210 Z" />
+
+    <!-- Diagonal forming the 'A' leg -->
+    <path d="M245 220 L335 392 H275 L200 250 Z" fill="#93c5fd" opacity="0.9" />
+  </g>
+</svg>

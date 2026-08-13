@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Magnetic from "@/components/website/layout/Magnetic";
+import { LogoIcon } from "@/components/logo";
 import gsap from "gsap";
 
 const menus = [
@@ -96,9 +97,7 @@ export default function Navbar() {
               className="flex items-center gap-2 group/logo cursor-none"
               data-cursor="pointer"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-[0_0_10px_rgba(59,130,246,0.3)] group-hover/logo:rotate-12 transition-transform duration-300">
-                F
-              </div>
+              <LogoIcon className="h-8 w-8 shadow-[0_0_10px_rgba(59,130,246,0.3)] group-hover/logo:rotate-12 transition-transform duration-300" />
               <span className="font-bold text-white tracking-widest text-xs">
                 FAJRI<span className="text-blue-500">.</span>
               </span>
@@ -125,9 +124,7 @@ export default function Navbar() {
                   className="flex items-center gap-2.5 group/logo cursor-none"
                   data-cursor="pointer"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-[0_0_15px_rgba(59,130,246,0.35)] group-hover/logo:rotate-12 group-hover/logo:scale-105 transition-all duration-300">
-                    F
-                  </div>
+                  <LogoIcon className="h-10 w-10 shadow-[0_0_15px_rgba(59,130,246,0.35)] group-hover/logo:rotate-12 group-hover/logo:scale-105 transition-all duration-300" />
                   <span className="font-bold text-white tracking-widest group-hover/logo:text-blue-400 transition-colors duration-300 text-sm">
                     FAJRI<span className="text-blue-500">.</span>
                   </span>
@@ -198,9 +195,7 @@ export default function Navbar() {
               className="flex items-center gap-2 group cursor-none"
               onClick={() => setOpen(false)}
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-md">
-                F
-              </div>
+              <LogoIcon className="h-8 w-8 shadow-md" />
               <span className="font-bold text-white tracking-widest text-xs">
                 FAJRI<span className="text-blue-500">.</span>
               </span>

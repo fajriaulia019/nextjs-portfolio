@@ -26,7 +26,7 @@ export default function Hero() {
   // Dynamic Typewriter Roles
   const roles = [
     "Full-Stack Developer",
-    "Laravel Specialist",
+    "Web Developer",
     "Backend Engineer",
   ];
   const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);
@@ -298,17 +298,17 @@ export default function Hero() {
         {!isMobileView && (
           <div
             ref={lanyardRef}
-            className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing"
+            className="hidden lg:flex w-full md:min-w-full items-center justify-center cursor-grab active:cursor-grabbing py-5"
             style={{ willChange: "transform", transformStyle: "preserve-3d" }}
             data-cursor="drag"
           >
             <Lanyard
-              position={[0, 3, 12]}
-              gravity={[0, -40, 0]}
-              frontImage={badgeImages.front}
+              position={[0, 0, 12]}
+              gravity={[0, -30, 0]}
+              frontImage="lanyard/front-photo.png"
               backImage={badgeImages.back}
               imageFit="cover"
-              lanyardImage=""
+              lanyardImage="lanyard/lanyard2.png"
               lanyardWidth={1}
               transparent={true}
             />
