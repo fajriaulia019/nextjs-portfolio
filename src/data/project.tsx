@@ -70,4 +70,23 @@ export const projects: ProjectType[] = [
     demoUrl: "https://sman1matauli.sch.id/",
     githubUrl: "",
   },
+  {
+    title: "Cyber-Dark Interactive Portfolio",
+    slug: "nextjs-portfolio",
+    description:
+      "Website portofolio full-stack web developer interaktif dengan desain cyber-dark glassmorphism, animasi interaktif 3D Lanyard, dan struktur data modular.",
+    longDescription:
+      "Website portofolio interaktif premium ini dirancang untuk menampilkan identitas profesional saya sebagai Full-Stack Web Developer. Masalah utama dari web portofolio statis konvensional adalah kurangnya interaktivitas dan navigasi yang monoton yang gagal memberikan kesan premium bagi perekrut. Untuk itu, saya merancang visual bertema cyber-dark glassmorphism yang dipadukan dengan simulasi kartu identitas 3D interaktif berayun (3D Lanyard) memanfaatkan Three.js dan @react-three/rapier dengan kalkulasi fisika real-time. Saya juga mengimplementasikan menu navigasi dinamis dengan efek cairan bubble (Gooey Nav), transisi rute halus menggunakan GSAP, serta memisahkan seluruh manajemen data konten ke dalam folder statik modular untuk kemudahan pemeliharaan. Hasilnya, situs web ini memberikan pengalaman pengguna yang sangat interaktif dan responsif di berbagai resolusi layar, sekaligus memamerkan keahlian pengembangan frontend canggih.",
+    tech: "Next.js 16, React 19, Tailwind CSS v4, TypeScript",
+    image: "/projects/portofolio_landing.webp",
+    features: [
+      "Simulasi kartu identitas 3D Lanyard interaktif menggunakan Three.js dan Rapier Physics engine",
+      "Menu navigasi elastis (Gooey Nav) yang menyesuaikan rute halaman secara dinamis",
+      "Desain visual modern cyber-dark glassmorphism dengan efek dot grid dan glow aura",
+      "Pemisahan data konten portofolio yang bersih di folder data modular untuk kemudahan pembaruan",
+      "Optimasi performa halaman dan transisi rute halus menggunakan GSAP",
+    ],
+    demoUrl: "",
+    githubUrl: "https://github.com/fajriaulia019/nextjs-portfolio",
+  },
 ];
