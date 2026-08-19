@@ -267,7 +267,7 @@ export default function Hero() {
 
       if (isMobileView && mobileLanyard) {
         gsap.to(mobileLanyard, {
-          y: 50,
+          y: 100,
           scale: 0.85,
           ease: "none",
           scrollTrigger: {
@@ -403,7 +403,7 @@ export default function Hero() {
             )}
           </div>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
+          <p className="mx-auto mt-4 max-w-lg text-base leading-8 text-zinc-400 lg:mx-0 lg:text-lg">
             Information Technology graduate with hands-on experience building
             secure, high-performance web applications using Laravel, Next.js,
             and MySQL. Passionate about clean code and full-stack craft.
