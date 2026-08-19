@@ -376,7 +376,7 @@ export default function Hero() {
             {load3D && LanyardComponent ? (
               isMobileView && (
                 <LanyardComponent
-                  position={[0, -1, 14]}
+                  position={[0, 0, 12]}
                   gravity={[0, -30, 0]}
                   frontImage="lanyard/front-photo.webp"
                   backImage={badgeImages.back}
